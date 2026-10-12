@@ -112,7 +112,16 @@ public:
         }
 
         Node* temp = head;
-        
+        head = head->next;
+
+        if(head){
+            head->prev = nullptr;
+        }
+        else{
+            tail = nullptr;
+        }
+
+        delete temp;
 
     }
 
@@ -122,7 +131,16 @@ public:
         }
 
         Node* temp = tail;
+        tail = tail->prev;
 
+        if(tail){
+            tail->next = nullptr;
+        }
+        else{
+            head = nullptr;
+        }
+
+        delete temp;
     }
 
     void print() {
