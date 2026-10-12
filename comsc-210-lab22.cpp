@@ -212,19 +212,33 @@ int main() {
         list.push_back(rand() % (MAX_NR-MIN_NR+1) + MIN_NR);
     cout << "List forward: ";
     list.print();
+    cout << endl;
 
     cout << "List backward: ";
     list.print_reverse();
+    cout << endl;
 
-    cout << "Deleting list, then trying to print.\n";
     cout << "List forward: ";
     list.print();
+    cout << endl;
 
     cout << "Deleting Node 3:" << endl;
     list.delete_pos(3);
     list.print();
+    cout << endl;
 
-    
+    cout << "Deleting Head:" << endl;
+    list.pop_front();
+    list.print();
+    cout << endl;
+
+    cout << "Deleting Tail:" << endl;
+    list.pop_back();
+    list.print();
+    cout << endl;
+
+    cout << "Deleting list, then trying to print.\n";
+    list.~DoublyLinkedList();
 
     return 0;
 }
