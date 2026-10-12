@@ -104,6 +104,21 @@ public:
 
     void delete_pos(int position){
 
+        Node* temp = head;
+
+        if(position < 0){
+            cout << "Position not valid. Try Again" << endl;
+            return;
+        }
+
+        if(position == 0){
+            pop_front();
+            return;
+        }
+
+        for(int i = 0; i < position)
+
+
     }
 
     void pop_front(){
