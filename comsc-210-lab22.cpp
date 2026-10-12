@@ -102,6 +102,12 @@ public:
         delete temp;
     }
 
+
+    //Void Function that deletes node by pos
+    //Checks if node exists, is head or tail
+    //Assigns prev next pointer to node after pos
+    //Assigns next prev pointer to node before pos
+    //Then deletes Node
     void delete_pos(int position){
 
         Node* temp = head;
@@ -118,7 +124,7 @@ public:
 
         for(int i = 0; i < position && temp; i++){
             temp = temp->next;
-        };
+        }
 
         if(!temp){
             cout << "Node doesn't exist! Out of position!" << endl;
@@ -137,6 +143,9 @@ public:
 
     }
 
+    //Void Function that deletes head
+    //Checks if head exists
+    //Uses next node to delete it and make new head
     void pop_front(){
         if(!head){
             return;
@@ -156,6 +165,9 @@ public:
 
     }
 
+    //Void Function that deletes tail
+    //Checks if tail exists
+    //Uses prev node to delete it and make new tail
     void pop_back(){
         if(!tail){
             return;
@@ -237,8 +249,14 @@ int main() {
     list.print();
     cout << endl;
 
+    cout << "Deleting val 44: " << endl;
+    list.delete_val(44);
+    list.print();
+    cout << endl;
+
     cout << "Deleting list, then trying to print.\n";
     list.~DoublyLinkedList();
+    list.print();
 
     return 0;
 }
