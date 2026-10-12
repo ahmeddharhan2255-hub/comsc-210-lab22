@@ -116,8 +116,24 @@ public:
             return;
         }
 
-        for(int i = 0; i < position)
+        for(int i = 0; i < position && temp; i++){
+            temp = temp->next;
+        };
 
+        if(!temp){
+            cout << "Node doesn't exist! Out of position!" << endl;
+            return;
+        }
+
+        if(temp->next == nullptr){
+            pop_back();
+            return;
+        }
+
+        temp->prev->next = temp->next;
+        temp->next->prev = temp->prev;
+
+        delete temp;
 
     }
 
