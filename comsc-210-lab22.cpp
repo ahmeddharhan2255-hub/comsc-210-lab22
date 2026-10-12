@@ -78,7 +78,7 @@ public:
         temp->next = newNode;
     }
 
-    void delete_node(int value) {
+    void delete_val(int value) {
         if (!head) return; // Empty list
 
         Node* temp = head;
@@ -100,6 +100,29 @@ public:
         }
 
         delete temp;
+    }
+
+    void delete_pos(int position){
+
+    }
+
+    void pop_front(){
+        if(!head){
+            return;
+        }
+
+        Node* temp = head;
+        
+
+    }
+
+    void pop_back(){
+        if(!tail){
+            return;
+        }
+
+        Node* temp = tail;
+
     }
 
     void print() {
