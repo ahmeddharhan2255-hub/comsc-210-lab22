@@ -217,9 +217,14 @@ int main() {
     list.print_reverse();
 
     cout << "Deleting list, then trying to print.\n";
-    list.~DoublyLinkedList();
     cout << "List forward: ";
     list.print();
+
+    cout << "Deleting Node 3:" << endl;
+    list.delete_pos(3);
+    list.print();
+
+    
 
     return 0;
 }
